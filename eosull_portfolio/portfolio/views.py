@@ -1,4 +1,10 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from .models import Project
 
-def index(request):
-    return HttpResponse("Hello There, this is the first step to building your portfolio site")
+def all_projects(request):
+    projects = Project.objects.all()
+    context = {
+        'projects': projects,
+    }
+
+    return render(request, 'projects/projects.html', context)
