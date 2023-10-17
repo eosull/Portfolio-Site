@@ -27,9 +27,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-eosull-portfoliosite-j0wcrmb1kkz.ws-eu98.gitpod.io']
+ALLOWED_HOSTS = ['8000-eosull-portfoliosite-j0wcrmb1kkz.ws-eu98.gitpod.io',
+                 '8000-eosull-portfoliosite-q9njhn9tr2o.ws-eu105.gitpod.io',]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-eosull-portfoliosite-j0wcrmb1kkz.ws-eu98.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-eosull-portfoliosite-j0wcrmb1kkz.ws-eu98.gitpod.io',
+                        'https://8000-eosull-portfoliosite-q9njhn9tr2o.ws-eu105.gitpod.io',]
 
 # Application definition
 
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'home',
     'portfolio',
 ]
 
@@ -58,7 +61,9 @@ ROOT_URLCONF = 'eosull_portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,6 +75,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'eosull_portfolio.wsgi.application'
 
