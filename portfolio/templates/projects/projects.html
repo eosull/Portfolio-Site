@@ -3,7 +3,25 @@
 
 {% block content %}
 <div class="container-fluid">
-    <h1>All projects</h1>
-    <h2>All project info will go here</h2>
+    <div class="row justify-content-center my-3">
+        <div class="col text-center">
+            <h2>My Work</h2>
+            <h3>Here are some projects I have worked on, click into them for more info and live links!</h3>
+        </div>
+    </div>
+
+    <div class="row">
+            {% for project in projects %}
+            <div class="col-6 text-center">
+                <div class="card border-0">
+                    <img src="https://github.com/libgit2/libgit2sharp/raw/master/square-logo.png" class="card-img-top" alt="project image">
+                    <div class="card-body">
+                    <p class="card-text">{{ project.title }}</p>
+                    <p class="card-text text-muted">{{ project.description }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+    </div>
 </div>
 {% endblock %}
