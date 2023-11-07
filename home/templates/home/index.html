@@ -3,7 +3,76 @@
 
 {% block content %}
 <div class="container-fluid">
-    <h1>Hello There</h1>
-    <h2>This will be my portfolio site</h2>
+    <div class="row justify-content-center">
+        <div class="col-10 col-lg-6">
+            <img src="https://exxelpharma.com/wp/wp-content/uploads/2018/07/headshot-silhouette-30.png" class="img-fluid" alt="Headshot">
+        </div>
+        <div class="col-10 col-lg-6 text-center align-self-center">
+            <h2>Bio</h2>
+            <p>I am a Junior Full Stack Developer based in Berlin.</p><br>
+            <p>Experience with full stack technologies and frameworks including HTML, CSS, JavaScript, Python, Django.</p><br>
+            <p>Professional Experience in Customer Service, Technical Support, Content Management and Event Management.</p><br>
+        </div>
+        <div class="col-10 col-lg-6 text-center align-self-center">
+            <h2>Skills & Experience</h2>
+            <div class="row justify-content-center">
+                <div class="col-10 col-lg-6"><h3>Technologies</h3>
+                    <ul class="list-unstyled">
+                        <li>HTML</li>
+                        <li>JavaScript</li>
+                        <li>CSS</li>
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </div>
+                <div class="col-10 col-lg-6"><h3>Professional Skills</h3>
+                    <ul class="list-unstyled">
+                        <li>Team Work</li>
+                        <li>Agile Methodologies</li>
+                        <li>Remote Working</li>
+                        <li>Adaptability</li>
+                        <li>Curiousity</li>
+                        <li>Problem-Solver</li>
+                    </ul>
+                </div>
+                <div class="col-10 col-lg-6"><h3>Academic Experience</h3>
+                    <ul class="list-unstyled">
+                        <li>BSc from University of Limerick - 2018</li>
+                        <li>MA from University of Limerick - 2021</li>
+                        <li>Diploma from Code Institute - 2023</li>
+                    </ul>
+                </div>
+                <div class="col-10 col-lg-6"><h3>Professional Experience</h3>
+                    <ul class="list-unstyled">
+                        <li>Video Collection Analyst</li>
+                        <li>Retail Assistant</li>
+                        <li>Content Manager</li>
+                        <li>Event Technician</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-10 col-lg-6 text-center align-self-center">
+            <h2>Selected Projects</h2>
+            {% for project in projects %}
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <a href="{% url 'project_detail' project.id %}" class="card-text">{{ project.title }}</a>
+                        <p class="card-text">{{ project.description }}</p>
+                        <p class="card-text"><small class="text-muted">{{ project.date }}</small></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://github.com/libgit2/libgit2sharp/raw/master/square-logo.png" class="img-fluid rounded-start" alt="Project Image">
+                    </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <a href="{% url 'projects' %}" class="nav-link">All Projects</a>
+        </div>
 </div>
 {% endblock %}
