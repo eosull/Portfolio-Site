@@ -20,3 +20,8 @@ body {
 h1, h2, h3, h4, h5 {
     font-family: 'Exo 2', sans-serif;
 }
+
+#landing-profile-pic {
+    max-width: 150px;
+    max-height: 150px;
+}
