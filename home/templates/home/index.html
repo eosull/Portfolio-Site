@@ -3,8 +3,8 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-10 col-lg-8">
+    <div class="row justify-content-center landing-section">
+        <div class="col-12">
             <!-- Based on carousel example from Bootstrap:
             https://getbootstrap.com/docs/5.0/components/carousel/ -->
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -46,15 +46,15 @@
                 </button>
               </div>
         </div>
-        <div class="col-10 col-lg-4 text-center align-self-center">
-            <img src="{% static 'media/headshot.png' %}" class="rounded float-start" id="landing-profile-pic" alt="headshot">
-            <h2>Bio</h2>
+        <div class="col-12 text-center align-self-center landing-section my-auto">
+            <img src="{% static 'media/headshot.jpg' %}" class="rounded float-start img-thumbnail" id="landing-profile-pic" alt="headshot">
+            <h2 class="fs-1 heading">Bio</h2>
             <p>I am a Junior Full Stack Developer based in Berlin.</p><br>
             <p>Experience with full stack technologies and frameworks including HTML, CSS, JavaScript, Python, Django.</p><br>
-            <p>Professional Experience in Customer Service, Technical Support, Content Management and Event Management.</p><br>
+            <p>Professional Experience in Customer Service, Technical Support, Content Management and Event Production.</p><br>
         </div>
-        <div class="col-10 col-lg-6 text-center align-self-center">
-            <h2>Skills & Experience</h2>
+        <div class="col-12 text-center align-self-center landing-section my-auto">
+            <h2 class="fs-1 heading">Skills & Experience</h2>
             <div class="row justify-content-center">
                 <div class="col-10 col-lg-6"><h3>Technologies</h3>
                     <ul class="list-unstyled">
@@ -94,8 +94,8 @@
             </div>
             
         </div>
-        <div class="col-10 col-lg-6 text-center align-self-center">
-            <h2>Selected Projects</h2>
+        <div class="col-12 text-center align-self-center landing-section my-auto">
+            <h2 class="fs-1 heading">Selected Projects</h2>
             {% for project in projects %}
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
