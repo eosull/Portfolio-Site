@@ -3,8 +3,8 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row justify-content-center landing-section">
-        <div class="col-12">
+    <div class="row justify-content-center align-items-center landing-section">
+        <div class="col-12 text-center">
             <!-- Based on carousel example from Bootstrap:
             https://getbootstrap.com/docs/5.0/components/carousel/ -->
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -15,22 +15,22 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="{% static 'media/landing.png' %}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <img src="{% static 'media/landing.png' %}" class="d-block w-100 img-fluid" alt="...">
+                    <div class="carousel-caption">
                       <h5>E-Commerce Site</h5>
                       <p>Landing Page for 'Seoda By Sophie' E-Commerce Site</p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="{% static 'media/landing.png' %}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <img src="{% static 'media/landing.png' %}" class="d-block w-100 img-fluid" alt="...">
+                    <div class="carousel-caption">
                       <h5>Forum Site</h5>
                       <p>Landing Page for 'Something Like' Forum Site</p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="{% static 'media/landing.png' %}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <img src="{% static 'media/landing.png' %}" class="d-block w-100 img-fluid" alt="...">
+                    <div class="carousel-caption">
                       <h5>Third slide label</h5>
                       <p>Some representative placeholder content for the third slide.</p>
                     </div>
@@ -46,14 +46,18 @@
                 </button>
               </div>
         </div>
-        <div class="col-12 text-center align-self-center landing-section my-auto">
-            <img src="{% static 'media/headshot.jpg' %}" class="rounded float-start img-thumbnail" id="landing-profile-pic" alt="headshot">
-            <h2 class="fs-1 heading">Bio</h2>
-            <p>I am a Junior Full Stack Developer based in Berlin.</p><br>
-            <p>Experience with full stack technologies and frameworks including HTML, CSS, JavaScript, Python, Django.</p><br>
-            <p>Professional Experience in Customer Service, Technical Support, Content Management and Event Production.</p><br>
         </div>
-        <div class="col-12 text-center align-self-center landing-section my-auto">
+        <div class="row justify-content-center align-items-center landing-section">
+          <div class="col-12 text-center">
+              <img src="{% static 'media/headshot.jpg' %}" class="rounded float-start img-thumbnail" id="landing-profile-pic" alt="headshot">
+              <h2 class="fs-1 heading">Bio</h2>
+              <p>I am a Junior Full Stack Developer based in Berlin.</p><br>
+              <p>Experience with full stack technologies and frameworks including HTML, CSS, JavaScript, Python, Django.</p><br>
+              <p>Professional Experience in Customer Service, Technical Support, Content Management and Event Production.</p><br>
+          </div>
+      </div>
+      <div class="row justify-content-center align-items-center landing-section">
+        <div class="col-12 text-center">
             <h2 class="fs-1 heading">Skills & Experience</h2>
             <div class="row justify-content-center">
                 <div class="col-10 col-lg-6"><h3>Technologies</h3>
@@ -94,7 +98,9 @@
             </div>
             
         </div>
-        <div class="col-12 text-center align-self-center landing-section my-auto">
+      </div>
+      <div class="row justify-content-center align-items-center landing-section">
+        <div class="col-12 text-center">
             <h2 class="fs-1 heading">Selected Projects</h2>
             {% for project in projects %}
                 <div class="card mb-3" style="max-width: 540px;">
@@ -114,5 +120,6 @@
             {% endfor %}
             <a href="{% url 'projects' %}" class="nav-link">All Projects</a>
         </div>
+      </div>
 </div>
 {% endblock %}
