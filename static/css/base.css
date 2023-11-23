@@ -2,6 +2,8 @@
 /* Colour variables */
 :root {
     --orange: #f77731;
+    --grey: rgb(50, 50, 50);
+    --grey-light: rgba(0, 0, 0, 0.549);
 }
 
 body {
@@ -10,7 +12,7 @@ body {
     flex-direction: column;
     background-color: black;
     color: white;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
 .footer-container {
@@ -21,8 +23,8 @@ body {
     background-color: black;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Exo 2', sans-serif;
+h1, h2, h3, h4, h5, a {
+    font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
 /* Landing Styling */
@@ -30,11 +32,28 @@ h1, h2, h3, h4, h5 {
     min-height: 60vh;
 }
 
+.carousel-caption {
+    background-color: var(--grey-light);
+    width: 50%;
+}
+
 #landing-profile-pic {
     max-width: 200px;
     max-height: 200px;
+    background-color: var(--grey);
+    border: none;
 }
 
 .heading {
     color: var(--orange);
+}
+
+/* Media Queries */
+
+@media (max-width: 575px) {
+    #landing-profile-pic {
+        width: 150px;
+        height: 150px;
+        border: none !important;
+    }
 }

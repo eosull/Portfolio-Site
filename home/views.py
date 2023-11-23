@@ -3,7 +3,7 @@ from portfolio.views import Project
 
 def home(request):
     # View returning index page
-    projects = Project.objects.order_by('-date')[:2]
+    projects = Project.objects.order_by('-date')[:3]
 
     context = {
         'projects': projects,
