@@ -2,7 +2,7 @@
 /* Colour variables */
 :root {
     --orange: #f77731;
-    --grey: rgb(50, 50, 50);
+    --grey: rgb(132, 132, 132);
     --grey-light: rgba(0, 0, 0, 0.549);
 }
 
@@ -25,6 +25,18 @@ body {
 
 h1, h2, h3, h4, h5, a {
     font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.text-muted {
+    color: var(--grey) !important;
+}
+
+.text-lvl-one {
+    color: var(--grey);
+}
+
+.text-lvl-two {
+
 }
 
 /* Landing Styling */
