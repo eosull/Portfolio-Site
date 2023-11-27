@@ -35,37 +35,11 @@ h1, h2, h3, h4, h5, a {
     color: var(--grey);
 }
 
-.text-lvl-two {
-
-}
-
 /* Landing Styling */
 .landing-section {
-    min-height: 60vh;
-}
-
-.carousel-caption {
-    background-color: var(--grey-light);
-    width: 50%;
-}
-
-#landing-profile-pic {
-    max-width: 200px;
-    max-height: 200px;
-    background-color: var(--grey);
-    border: none;
+    min-height: 70vh;
 }
 
 .heading {
     color: var(--orange);
-}
-
-/* Media Queries */
-
-@media (max-width: 575px) {
-    #landing-profile-pic {
-        width: 150px;
-        height: 150px;
-        border: none !important;
-    }
 }
