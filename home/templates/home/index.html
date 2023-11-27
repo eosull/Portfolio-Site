@@ -7,7 +7,7 @@
           <div class="col-10">
               <!-- <img src="{% static 'media/headshot.jpg' %}" class="d-none d-md-block rounded float-start img-thumbnail m-4" id="landing-profile-pic" alt="headshot"> -->
               <h2 class="fs-1 heading">Eoin O'Sullivan</h2>
-              <h4>Junior Full Stack Developer</h4>
+              <h4 class="heading-orange">Full Stack Developer</h4>
               <p>I build web applications for individuals, businesses and for fun.</p>
           </div>
       </div>
@@ -68,7 +68,7 @@
         </div>
         <hr class="w-50 my-4">
         <div class="col-10">
-          <h5 class="text-lvl-one small">Professional</h4>
+          <h5 class="text-lvl-one small">Professional</h5>
           <div class="row">
             <div class="col-3">
               <p class="text-muted">2022-2023</p>
@@ -121,9 +121,9 @@
           </div>
         </div>
       </div>
-      <div class="row landing-section">
-        <div class="col-12 text-center">
-            <h2 class="fs-1 heading">Selected Projects</h2>
+      <div class="row justify-content-center align-items-center landing-section my-5">
+        <div class="col-10">
+            <h4>Projects</h4>
             {% for project in projects %}
                 <div class="card mb-3 mx-auto" style="max-width: 540px;">
                     <div class="row g-0">
@@ -140,7 +140,6 @@
                     </div>
                 </div>
             {% endfor %}
-            <a href="{% url 'projects' %}" class="nav-link">All Projects</a>
         </div>
       </div>
 </div>

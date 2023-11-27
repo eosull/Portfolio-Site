@@ -40,6 +40,6 @@ h1, h2, h3, h4, h5, a {
     min-height: 70vh;
 }
 
-.heading {
+.heading-orange {
     color: var(--orange);
 }
