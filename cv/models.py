@@ -1,5 +1,12 @@
 from django.db import models
 
+class Personal(models.Model):
+    name = models.CharField(max_length=200)
+    location = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
+
 class ProfessionalExperience(models.Model):
     title = models.CharField(max_length=200)
     company = models.CharField(max_length=200)
@@ -36,3 +43,11 @@ class AcademicExperience(models.Model):
             return False
         else:
             return "Present"
+
+class Links(models.Model):
+    title = models.CharField(max_length=200)
+    url = models.CharField(max_length=200)
+    logo = models.CharField(max_length=200, blank=True)
+
+    def __str__(self):
+        return self.title

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ProfessionalExperience, AcademicExperience
+from .models import ProfessionalExperience, AcademicExperience, Personal, Links
 
 class ProfessionalAdmin(admin.ModelAdmin):
     list_display = (
@@ -23,3 +23,5 @@ class AcademicAdmin(admin.ModelAdmin):
 
 admin.site.register(ProfessionalExperience, ProfessionalAdmin)
 admin.site.register(AcademicExperience, AcademicAdmin)
+admin.site.register(Personal)
+admin.site.register(Links)
