@@ -27,10 +27,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-eosull-portfoliosite-q9njhn9tr2o.ws-eu106.gitpod.io',]
+ALLOWED_HOSTS = ['8000-eosull-portfoliosite-id5edz7n5bf.ws-eu107.gitpod.io',]
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-eosull-portfoliosite-j0wcrmb1kkz.ws-eu98.gitpod.io',
-                        'https://8000-eosull-portfoliosite-q9njhn9tr2o.ws-eu105.gitpod.io',]
+                        'https://8000-eosull-portfoliosite-q9njhn9tr2o.ws-eu105.gitpod.io',
+                        'https://8000-eosull-portfoliosite-id5edz7n5bf.ws-eu107.gitpod.io',]
 
 # Application definition
 
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'portfolio',
+    'cv',
 ]
 
 MIDDLEWARE = [
