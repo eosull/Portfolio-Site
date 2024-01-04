@@ -43,3 +43,15 @@ h1, h2, h3, h4, h5, a {
 .heading-orange {
     color: var(--orange);
 }
+
+/* Form Styling */
+
+.form-input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.form-input-long {
+    width: 50%;
+}
