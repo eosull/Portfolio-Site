@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row justify-content-center my-3">
+        <div class="col text-center">
+            <h2>CV</h2>
+        </div>
+    </div>
+
+    <div class="row justify-content-center my-3">
+        <h5 class="text-lvl-one small">Professional</h5>
+        <hr>
+        {% for exp in professional_exp %}
+        <div class="col-3">
+            <p class="text-muted">{{ exp.start_date|date:"M Y" }} - {{ exp.end_date|date:"M Y" }}</p>
+        </div>
+        <div class="col-9">
+        <p class="lead my-0">{{ exp.company }}, {{ exp.location }}</p>
+        <p class="text-lvl-one my-0">{{ exp.title }}</p>
+        <p class="small my-0">{{ exp.description }}</p>
+        <p class="text-lvl-one mt-0">Key Skills: {{ exp.skills }}</p>
+        </div>
+          {% endfor %}
+    </div>
+
+</div>
+{% endblock %}
