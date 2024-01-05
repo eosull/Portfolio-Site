@@ -122,25 +122,17 @@
         </div>
       </div>
       <div class="row justify-content-center align-items-center landing-section my-5">
-        <div class="col-10">
-            <h4>Projects</h4>
-            {% for project in projects %}
-                <div class="card mb-3 mx-auto" style="max-width: 540px;">
-                    <div class="row g-0">
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <a href="{% url 'project_detail' project.id %}" class="card-text">{{ project.title }}</a>
-                        <p class="card-text">{{ project.description }}</p>
-                        <p class="card-text"><small class="text-muted">{{ project.date }}</small></p>
-                        </div>
+          <h4 class="text-center mb-4">Projects</h4>
+          {% for project in projects %}
+                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 p-0">
+                  <div class="card bg-dark text-white">
+                    <img src="https://odoocdn.com/openerp_website/static/src/img/apps/website/hero_image.webp" class="card-img" alt="...">
+                    <div class="card-img-overlay hidden">
+                      <a href="{% url 'project_detail' project.id %}" class="card-title">{{ project.title }}</a>
                     </div>
-                    <div class="col-md-4">
-                        <img src="https://github.com/libgit2/libgit2sharp/raw/master/square-logo.png" class="img-fluid rounded-start" alt="Project Image">
-                    </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-      </div>
+                  </div>
+                 </div>
+              {% endfor %}
+           </div>
 </div>
 {% endblock %}

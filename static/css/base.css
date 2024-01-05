@@ -4,6 +4,7 @@
     --orange: #f77731;
     --grey: rgb(132, 132, 132);
     --grey-light: rgba(0, 0, 0, 0.549);
+    --grey-dark: rgba(0, 0, 0, 0.828);
 }
 
 body {
@@ -35,6 +36,11 @@ h1, h2, h3, h4, h5, a {
     color: var(--grey);
 }
 
+a { 
+    color: white;
+    text-decoration: none;
+}
+
 /* Landing Styling */
 .landing-section {
     min-height: 70vh;
@@ -42,6 +48,27 @@ h1, h2, h3, h4, h5, a {
 
 .heading-orange {
     color: var(--orange);
+}
+
+.card,
+.card-img-overlay,
+.card-img {
+    border-radius: 0 !important;
+}
+
+.card-img-overlay:hover {
+    transition: 0.3s;
+    background-color: var(--grey-dark);
+    display: block;
+}
+
+.card-title {
+    display: none;
+}
+
+.card-img-overlay:hover .card-title {
+    transition: 0.3s;
+    display: block;
 }
 
 /* Form Styling */
