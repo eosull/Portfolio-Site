@@ -1,4 +1,9 @@
 from django.shortcuts import render, redirect
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+
+from django.conf import settings
+
 from .forms import ContactForm
 from django.http import HttpResponse
 
@@ -10,11 +15,28 @@ def contact(request):
         if form.is_valid():
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
-            file = open('responses.csv', 'a')
-            writer = csv.writer(file)
-            writer.writerow([name,email,message])
-            file.close()
+
+            # Building Email
+            subject = render_to_string(
+                'contact/emails/email_subject.txt',
+                {'name': name, 'subject': subject})
+            body = render_to_string(
+                'contact/emails/email_body.txt',
+                {'name': name,
+                 'email': email,
+                 'message': message
+                })
+            # Sending Email
+            send_mail(
+                subject,
+                body,
+                settings.DEFAULT_FROM_EMAIL,
+                [settings.DEFAULT_FROM_EMAIL],
+                fail_silently=False,
+            )
+
             return redirect('success')
     else:
         form = ContactForm()
@@ -24,4 +46,3 @@ def contact(request):
 
 def success(request):
     return render(request, 'contact/success.html')
-

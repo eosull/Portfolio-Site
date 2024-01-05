@@ -1,0 +1,10 @@
+Hello!
+
+You have a new message from {{ name }}: 
+
+{{ message }}
+
+You can reply to the message from {{ name }} at {{ email }}
+
+Thanks, 
+Your automated email system.
