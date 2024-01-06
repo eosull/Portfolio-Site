@@ -41,6 +41,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    padding: 0;
+}
+
 /* Landing Styling */
 .landing-section {
     min-height: 70vh;

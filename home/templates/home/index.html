@@ -27,98 +27,42 @@
       </div>
       <div class="row justify-content-center align-items-center landing-section my-5">
         <div class="col-10">
-          <h4>Experience</h4>
+          <a href="{% url 'cv' %}"><h4>Experience</h4></a>
           <h5 class="text-lvl-one small">Academic</h4>
+          {% for record in acad_exp %}
           <div class="row">
             <div class="col-3">
-              <p class="text-muted">2022-2023</p>
+              <p class="text-muted">{{ record.start_date|date:"M Y" }} - {{ record.end_date|date:"M Y" }}</p>
             </div>
             <div class="col-9">
-              <p class="lead my-0">Code Institute, Dublin</p>
-              <p class="text-lvl-one my-0">Diploma in Full Stack Software Development (E-Commerce)</p>
-              <p class="small mt-0">Developed Full Stack skills in a Portfolio project orientated syllabus.
-                This included Python, JavaScript, HTML, CSS, Git and SQL.
-                Design thinking, agile development and web marketing also utilised in project development.</p>
+              <ul>
+                <li>
+                  <p class="lead my-0">{{ record.institution }}, {{ record.location }}</p>
+                </li>
+              </ul>
+              <p class="text-lvl-one my-0">{{ record.level }} {{ record.field }}</p>
             </div>
           </div>
-          <div class="row">
-            <div class="col-3">
-              <p class="text-muted">2021-2022</p>
-            </div>
-            <div class="col-9">
-              <p class="lead my-0">University of Limerick, Limerick</p>
-              <p class="text-lvl-one my-0">MA in Art and Technology</p>
-              <p class="small mt-0">Engaged with and contextualised technology in a contemporary art practice.
-                Explored generative, algorithmic and machine learning practices in music composition using Max
-                as part of a thesis titled "Exploring Algorithmic Composition in Systems Based Music".</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-3">
-              <p class="text-muted">2014-2018</p>
-            </div>
-            <div class="col-9">
-              <p class="lead my-0">University of Limerick, Limerick</p>
-              <p class="text-lvl-one my-0">BSc in Media and Performance Techology</p>
-              <p class="small mt-0">Studied audio/visual programming, prototyping and performance in a media arts context.
-               Completed a year-long research project titled
-              “Dramaturgy in focus: how structure and editing are used to create effective radio documentaries”.</p>
-            </div>
-          </div>
+          {% endfor %}
         </div>
         <hr class="w-50 my-4">
         <div class="col-10">
           <h5 class="text-lvl-one small">Professional</h5>
+          {% for record in prof_exp %}
           <div class="row">
             <div class="col-3">
-              <p class="text-muted">2022-2023</p>
+              <p class="text-muted">{{ record.start_date|date:"M Y" }} - {{ record.end_date|date:"M Y" }}</p>
             </div>
             <div class="col-9">
-              <p class="lead my-0">Stats Perform, Limerick</p>
-              <p class="text-lvl-one my-0">Video Collection Analyst</p>
-              <p class="small mt-0">Provided technical support for analysis teams and identified/investigated bugs
-                 and recurring technical operational issues. Provided daily reports on hardware and software checks
-                 while supporting on-site and remote team members.</p>
-            </div>
-            <div class="col-3">
-              <p class="text-muted">2021-2023</p>
-            </div>
-            <div class="col-9">
-              <p class="lead my-0">Freelance, Limerick</p>
-              <p class="text-lvl-one my-0">Art Technician</p>
-              <p class="small mt-0">Assisted with installation of local, national and international art exhibitions,
-                working individually and in teams to adapt to new spaces and install needs.
-                Communicated with venue managers, curators and artists to ensure all client's needs are met.</p>
-            </div>
-            <div class="col-3">
-              <p class="text-muted">2019-2021</p>
-            </div>
-            <div class="col-9">
-              <p class="lead my-0">Zest! At Ltd, Limerick</p>
-              <p class="text-lvl-one my-0">Retail Assistant</p>
-              <p class="small mt-0">Provided excellent customer service while conducting sales and serving food and drinks
-                managing cash/till receipts and complete end of day count. Also served as supervisor during 2021.</p>
-            </div>
-            <div class="col-3">
-              <p class="text-muted">2016</p>
-            </div>
-            <div class="col-9">
-              <p class="lead my-0">Dreamlines GmbH</p>
-              <p class="text-lvl-one my-0">Content Manager (Internship)</p>
-              <p class="small mt-0">Created and maintained content for an online sales portal.
-                Worked across departments with marketing team to create promotional material.
-                Researched and verified information presented on website for accuracy.</p>
-            </div>
-            <div class="col-3">
-              <p class="text-muted">2012-2018</p>
-            </div>
-            <div class="col-9">
-              <p class="lead my-0">Traditional Cheese, Dublin</p>
-              <p class="text-lvl-one my-0">General Operative</p>
-              <p class="small mt-0">Contributed to production in high-rate and high-care environments
-                while maintaining food hygiene standards.</p>
+              <ul>
+                <li>
+                  <p class="lead my-0">{{ record.company }}, {{ record.location }}</p>
+                </li>
+              </ul>
+              <p class="text-lvl-one my-0">{{ record.title }}</p>
             </div>
           </div>
+          {% endfor %}
         </div>
       </div>
       <div class="row justify-content-center align-items-center landing-section my-5">
