@@ -2,6 +2,7 @@ from django.db import models
 
 class Personal(models.Model):
     name = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, blank=True)
     location = models.CharField(max_length=200)
 
     def __str__(self):

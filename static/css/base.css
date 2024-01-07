@@ -54,6 +54,10 @@ ul {
     color: var(--orange);
 }
 
+.hero-image-container {
+    clip-path: polygon(0 17%, 100% 17%, 100% 78%, 24% 78%);
+}
+
 .card,
 .card-img-overlay,
 .card-img {

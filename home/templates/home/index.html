@@ -3,12 +3,17 @@
 
 {% block content %}
 <div class="container-fluid">
-        <div class="row justify-content-center align-items-center landing-section my-5">
-          <div class="col-10">
+        <div class="row align-items-center landing-section p-5 my-5">
+          <div class="col-md-4 col-sm-10">
               <!-- <img src="{% static 'media/headshot.jpg' %}" class="d-none d-md-block rounded float-start img-thumbnail m-4" id="landing-profile-pic" alt="headshot"> -->
-              <h2 class="fs-1 heading">Eoin O'Sullivan</h2>
-              <h4 class="heading-orange">Full Stack Developer</h4>
-              <p>I build web applications for individuals, businesses and for fun.</p>
+              <h2 class="fs-1 heading">{{ personal.name }}</h2>
+              <h4 class="heading-orange">{{ personal.title }}</h4>
+              <h5 class="text-lvl-one">{{ personal.location }}</h5>
+          </div>
+          <div class="col d-none d-md-block">
+            <div class="hero-image-container">
+              <img src="https://odoocdn.com/openerp_website/static/src/img/apps/website/hero_image.webp" class="hero-image card-img" alt="...">
+            </div>
           </div>
       </div>
       <div class="row justify-content-center align-items-center landing-section my-5">
