@@ -76,9 +76,11 @@
                 <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 p-0">
                   <div class="card bg-dark text-white">
                     <img src="https://odoocdn.com/openerp_website/static/src/img/apps/website/hero_image.webp" class="card-img" alt="...">
-                    <div class="card-img-overlay hidden">
-                      <a href="{% url 'project_detail' project.id %}" class="card-title">{{ project.title }}</a>
-                    </div>
+                    <a href="{% url 'project_detail' project.id %}">
+                      <div class="card-img-overlay hidden">
+                          <p class="card-title">{{ project.title }}</p>
+                        </div>
+                    </a>
                   </div>
                  </div>
               {% endfor %}

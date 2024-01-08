@@ -70,12 +70,18 @@ ul {
     display: block;
 }
 
-.card-title {
+.card-title,
+.card-text {
     display: none;
 }
 
-.card-img-overlay:hover .card-title {
-    transition: 0.3s;
+.card-img-overlay:hover .card-title{
+    transition: 0.5s;
+    display: block;
+}
+
+.card-img-overlay:hover .card-text{
+    transition: 0.5s;
     display: block;
 }
 

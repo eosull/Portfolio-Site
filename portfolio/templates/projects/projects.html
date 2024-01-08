@@ -5,22 +5,23 @@
 <div class="container-fluid">
     <div class="row justify-content-center my-3">
         <div class="col text-center">
-            <h2>My Work</h2>
-            <h3 class="fs-5">Here are some projects I have worked on, click into them for more info and live links!</h3>
+            <h2>Development Work</h2>
         </div>
     </div>
 
     <div class="row">
             {% for project in projects %}
-            <div class="col-6 text-center">
-                <div class="card border-0">
-                    <img src="https://github.com/libgit2/libgit2sharp/raw/master/square-logo.png" class="card-img-top" alt="project image">
-                    <div class="card-body">
-                    <a href="{% url 'project_detail' project.id %}" class="card-text">{{ project.title }}</a>
-                    <p class="card-text text-muted">{{ project.description }}</p>
-                    </div>
+            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 p-4">
+                <div class="card bg-dark text-white">
+                  <img src="https://odoocdn.com/openerp_website/static/src/img/apps/website/hero_image.webp" class="card-img" alt="...">
+                  <a href="{% url 'project_detail' project.id %}">
+                    <div class="card-img-overlay hidden">
+                        <p class="card-title">{{ project.title }}</p>
+                        <p class="card-text">{{ project.description }}</p>
+                      </div>
+                  </a>
                 </div>
-            </div>
+               </div>
             {% endfor %}
     </div>
 </div>
