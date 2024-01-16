@@ -3,22 +3,33 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-11">
-            <div class="card mb-3">
-                <img src="https://github.com/libgit2/libgit2sharp/raw/master/square-logo.png" class="card-img-top" alt="project image">
-                <div class="card-body">
-                  <h2 class="card-title">{{ project.title }}</h2>
-                  <p class="card-text">{{ project.description }}</p>
-                  <div>
-                    {% if project.live_link %}
-                    <a href="{{ project.live_link }}" class="nav-link d-inline">Live Link</a>
-                    {% endif %}
-                    {% if project.code_link %}
+
+    <div class="row">
+        <div class="col mb-4 mb-lg-0 p-4">
+            <div class="card">
+                <img src="https://odoocdn.com/openerp_website/static/src/img/apps/website/hero_image.webp"
+                    class="card-img" alt="...">
+                <h2>{{ project.title }}</h2>
+                <div class="row">
+                    <div class="col-6 d-flex">
+                        {% if project.live_link %}
+                        <a href="{{ project.live_link }}" class="nav-link d-inline">Live Link</a>
+                        {% endif %}
+                        {% if project.code_link %}
                         <a href="{{ project.code_link }}" class="nav-link d-inline">Code Repository</a>
-                    {% endif %}
-                  </div>
-                  <p class="card-text"><small class="text-muted">{{ project.date }}</small></p>
+                        {% endif %}
+                    </div>
+                </div>
+                <p>{{ project.description }}</p>
+                <p><small class="text-muted">{{ project.date }}</small></p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>{{ project.body_text_1 }}</p>
+                    <br>
+                    <p>{{ project.body_text_2 }}</p>
+                    <br>
+                    <p>{{ project.body_text_3 }}</p>
                 </div>
             </div>
         </div>
