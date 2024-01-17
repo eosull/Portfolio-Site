@@ -23,15 +23,37 @@
       <div class="row justify-content-center align-items-center landing-section my-5">
         <div class="col-10">
           <h4>About Me</h4>
+          <div>
+
+          </div>
           <p>
-            I've got experience with full stack technologies including HTML, CSS, JavaScript, Python, Django
-            and worked on artist portfolios, online games, forum sites and an online store.
+            I've got experience with core full stack technologies including HTML, CSS, JavaScript and Python. Alongside this
+            I've worked with SQL, Django, Bootstrap and AWS hosting. So far my work has included artist portfolios,
+            online games, forum sites and an online store. I'm constantly looking to keep developing and building projects
+            so I've built this site to display all my work!
           </p>
+          <div class="row m-4 d-none d-md-block">
+            <div class="col d-flex justify-content-evenly">
+              <i class="fa-brands fa-python icon-no-link display-6"></i>
+              <i class="fa-brands fa-js icon-no-link display-6"></i>
+            </div>
+          </div>
           <p>
-            My professional experience is in Customer Service, Technical Support, Content Management and Event Production. In 2022
-            I took my love for problem-solving and creative uses for technology and enrolled in a Software Development course. I'm now
-            searching for my first role where I can continue developing and contribute to the digital experiences of tomorrow!
+            My professional experience is in Customer Service, Technical Support, Content Management and Event Production.
+            Academically, I started out studying media, art and technology, gaining a BSc and MA in the field from the University of Limerick.
+            This included work studying code art, algorithmic music and generative processes.
           </p>
+          <div class="row m-4 d-none d-md-block">
+            <div class="col d-flex justify-content-evenly">
+              <i class="fa-brands fa-html5 icon-no-link display-6"></i>
+              <i class="fa-brands fa-css3-alt icon-no-link display-6"></i>
+            </div>
+          </div>
+          <p>
+            In 2022, keen to develop
+            my problem-solving skills and add industry knowledge to my interest in creative applications for technology
+            I enrolled in a Software Development course. I'm now continuing to build and explore while also searching for my
+            first role where I can continue developing and contribute to the experiences of tomorrow!</p>
         </div>
       </div>
       <div class="row justify-content-center align-items-center landing-section my-5">
@@ -77,7 +99,7 @@
       <div class="row justify-content-center align-items-center landing-section my-5">
           <h4 class="text-center mb-4">Projects</h4>
           {% for project in projects %}
-                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 p-0">
+                <div class="col-lg-6 col-md-1 mb-4 mb-lg-0 p-0">
                   <div class="card bg-dark text-white">
                     <img src="https://odoocdn.com/openerp_website/static/src/img/apps/website/hero_image.webp" class="card-img" alt="...">
                     <a href="{% url 'project_detail' project.id %}">

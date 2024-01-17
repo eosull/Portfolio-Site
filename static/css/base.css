@@ -46,7 +46,8 @@ ul {
     padding: 0;
 }
 
-.icon {
+.icon,
+.icon-no-link {
     color: var(--orange);
 }
 
