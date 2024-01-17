@@ -61,17 +61,19 @@
           <a href="{% url 'cv' %}"><h4>Experience</h4></a>
           <h5 class="text-lvl-one small">Academic</h4>
           {% for record in acad_exp %}
-          <div class="row">
+          <div class="row m-2">
             <div class="col-3">
               <p class="text-muted">{{ record.start_date|date:"M Y" }} - {{ record.end_date|date:"M Y" }}</p>
             </div>
             <div class="col-9">
-              <ul>
+              <ul class="m-1">
                 <li>
                   <p class="lead my-0">{{ record.institution }}, {{ record.location }}</p>
                 </li>
               </ul>
-              <p class="text-lvl-one my-0">{{ record.level }} {{ record.field }}</p>
+              <p class="text-lvl-one my-0 orange-highlight">{{ record.level }} {{ record.field }}</p>
+              <p class="my-0">{{ record.description }}</p>
+              <p class="text-lvl-one my-0">Key Skills: {{ record.skills }}</p>
             </div>
           </div>
           {% endfor %}
@@ -80,17 +82,19 @@
         <div class="col-10">
           <h5 class="text-lvl-one small">Professional</h5>
           {% for record in prof_exp %}
-          <div class="row">
+          <div class="row m-2">
             <div class="col-3">
               <p class="text-muted">{{ record.start_date|date:"M Y" }} - {{ record.end_date|date:"M Y" }}</p>
             </div>
             <div class="col-9">
-              <ul>
+              <ul class="m-1">
                 <li>
                   <p class="lead my-0">{{ record.company }}, {{ record.location }}</p>
                 </li>
               </ul>
-              <p class="text-lvl-one my-0">{{ record.title }}</p>
+              <p class="text-lvl-one my-0  orange-highlight">{{ record.title }}</p>
+              <p class="my-0">{{ record.description }}</p>
+              <p class="text-lvl-one my-0">Key Skills: {{ record.skills }}</p>
             </div>
           </div>
           {% endfor %}

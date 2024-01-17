@@ -56,6 +56,10 @@ ul {
     transition: 0.6s;
 }
 
+.orange-highlight {
+    color: var(--orange);
+}
+
 /* Landing Styling */
 .landing-section {
     min-height: 70vh;
