@@ -2,6 +2,7 @@
 /* Colour variables */
 :root {
     --orange: #f77731;
+    --orange-light: #f7763195;
     --grey: rgb(132, 132, 132);
     --grey-light: rgba(0, 0, 0, 0.549);
     --grey-dark: rgba(0, 0, 0, 0.828);
@@ -43,6 +44,15 @@ a {
 
 ul {
     padding: 0;
+}
+
+.icon {
+    color: var(--orange);
+}
+
+.icon:hover {
+    color: var(--orange-light);
+    transition: 0.6s;
 }
 
 /* Landing Styling */
