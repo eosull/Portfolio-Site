@@ -13,7 +13,7 @@
             {% for project in projects %}
             <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 p-4">
                 <div class="card bg-dark text-white">
-                  <img src="https://odoocdn.com/openerp_website/static/src/img/apps/website/hero_image.webp" class="card-img" alt="...">
+                  <img src="{{ project.image_main.url }}" alt="{{ project.title }}" class="card-img">
                   <a href="{% url 'project_detail' project.id %}">
                     <div class="card-img-overlay hidden">
                         <p class="card-title">{{ project.title }}</p>

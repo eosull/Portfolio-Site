@@ -69,10 +69,10 @@
             <div class="col-12 col-sm-9">
               <ul class="m-1 m-sm-0">
                 <li>
-                  <p class="lead my-0">{{ record.institution }}, {{ record.location }}</p>
+                  <p class="lead my-0">{{ record.level }} {{ record.field }}</p>
                 </li>
               </ul>
-              <p class="text-lvl-one my-0 orange-highlight">{{ record.level }} {{ record.field }}</p>
+              <p class="text-lvl-one my-0 orange-highlight">{{ record.institution }}, {{ record.location }}</p>
               <p class="my-0">{{ record.description }}</p>
               <p class="text-lvl-one my-0">Key Skills: {{ record.skills }}</p>
             </div>
@@ -84,17 +84,17 @@
           <h5 class="text-lvl-one small">Professional</h5>
           {% for record in prof_exp %}
           <br class="d-block d-sm-none">
-          <div class="row m-2">
+          <div class="row">
             <div class="col-12 col-sm-3">
               <p class="text-muted">{{ record.start_date|date:"M Y" }} - {{ record.end_date|date:"M Y" }}</p>
             </div>
             <div class="col-12 col-sm-9">
               <ul class="m-1">
                 <li>
-                  <p class="lead my-0">{{ record.company }}, {{ record.location }}</p>
+                  <p class="lead my-0">{{ record.title }}</p>
                 </li>
               </ul>
-              <p class="text-lvl-one my-0  orange-highlight">{{ record.title }}</p>
+              <p class="text-lvl-one my-0  orange-highlight">{{ record.company }}, {{ record.location }}</p>
               <p class="my-0">{{ record.description }}</p>
               <p class="text-lvl-one my-0">Key Skills: {{ record.skills }}</p>
             </div>
@@ -107,7 +107,7 @@
           {% for project in projects %}
                 <div class="col-lg-6 col-md-1 mb-4 mb-lg-0 p-0">
                   <div class="card bg-dark text-white">
-                    <img src="https://odoocdn.com/openerp_website/static/src/img/apps/website/hero_image.webp" class="card-img" alt="...">
+                    <img src="{{ project.image_main.url }}" alt="{{ project.title }}" class="card-img">
                     <a href="{% url 'project_detail' project.id %}">
                       <div class="card-img-overlay hidden">
                           <p class="card-title">{{ project.title }}</p>

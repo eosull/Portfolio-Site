@@ -5,6 +5,8 @@ class Project(models.Model):
     slug = models.SlugField(max_length=200, unique=True, blank=True)
     date = models.DateField()
     description = models.TextField()
+    image_main = models.ImageField(upload_to='images/', null=True, blank=True)
+    image_second = models.ImageField(upload_to='images/', null=True, blank=True)
     body_text_1 = models.TextField(blank=True, null=True)
     body_text_2 = models.TextField(blank=True, null=True)
     body_text_3 = models.TextField(blank=True, null=True)

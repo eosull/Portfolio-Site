@@ -7,18 +7,9 @@
     <div class="row">
         <div class="col mb-4 mb-lg-0 p-4">
             <div class="card">
-                <img src="https://odoocdn.com/openerp_website/static/src/img/apps/website/hero_image.webp"
-                    class="card-img" alt="...">
+                <img src="{{ project.image_main.url }}" alt="{{ project.title }}" class="img-fluid">
                 <h2>{{ project.title }}</h2>
                 <div class="row">
-                    <div class="col-6 d-flex">
-                        {% if project.live_link %}
-                        <a href="{{ project.live_link }}" class="nav-link d-inline">Live Link</a>
-                        {% endif %}
-                        {% if project.code_link %}
-                        <a href="{{ project.code_link }}" class="nav-link d-inline">Code Repository</a>
-                        {% endif %}
-                    </div>
                 </div>
                 <p>{{ project.description }}</p>
                 <p><small class="text-muted">{{ project.date }}</small></p>
@@ -28,8 +19,23 @@
                     <p>{{ project.body_text_1 }}</p>
                     <br>
                     <p>{{ project.body_text_2 }}</p>
+                    {% if project.image_second %}
+                    <div class="text-center">
+                        <img src="{{ project.image_second.url }}" alt="{{ project.title }}" class="img-fluid">
+                    </div>
+                    {% endif %}
                     <br>
                     <p>{{ project.body_text_3 }}</p>
+                    <div class="col-6 d-flex">
+                        {% if project.live_link %}
+                        <a href="{{ project.live_link }}" class="nav-link orange-highlight">Live Link</a>
+                        {% endif %}
+                    </div>
+                    <div class="col-6 d-flex">
+                        {% if project.code_link %}
+                        <a href="{{ project.code_link }}" class="nav-link orange-highlight">Code Repository</a>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
