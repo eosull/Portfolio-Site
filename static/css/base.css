@@ -60,6 +60,11 @@ ul {
     color: var(--orange);
 }
 
+img {
+    height: 400px;
+    overflow: hidden;
+}
+
 /* Landing Styling */
 .landing-section {
     min-height: 70vh;
@@ -71,6 +76,7 @@ ul {
 
 .hero-image-container {
     clip-path: polygon(0 17%, 100% 17%, 100% 78%, 24% 78%);
+    height: 40vh;
 }
 
 .card,

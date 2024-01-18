@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Project
 
 def all_projects(request):
-    projects = Project.objects.all()
+    projects = Project.objects.order_by('-date')
     context = {
         'projects': projects,
     }
