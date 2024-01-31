@@ -23,6 +23,8 @@ body {
 
 .card {
     background-color: black;
+    box-shadow:0 0 2px 0.1px white;
+    border: none;
 }
 
 h1, h2, h3, h4, h5, a {
@@ -112,10 +114,14 @@ ul {
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
+    padding: 5px;
+    border: none;
+    box-shadow:0 0 2px 1px white;
+    box-sizing: border-box;
 }
 
 .form-input-long {
-    width: 50%;
+    width: 75%;
 }
 
 /* Project Details Page */
