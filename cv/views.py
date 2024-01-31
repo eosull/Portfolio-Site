@@ -2,8 +2,8 @@ from django.shortcuts import render
 from .models import ProfessionalExperience, AcademicExperience, Personal, Links
 
 def cv(request):
-    professional_exp = ProfessionalExperience.objects.all()
-    academic_exp = AcademicExperience.objects.all()
+    professional_exp = ProfessionalExperience.objects.order_by('-end_date')
+    academic_exp = AcademicExperience.objects.order_by('-end_date')
     personal = Personal.objects.all()
     links = Links.objects.all()
     context = {

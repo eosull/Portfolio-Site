@@ -126,3 +126,16 @@ ul {
 .project-details img {
     max-height: 400px;
 }
+
+/* CV Page Styling */
+.list-group-item {
+    background-color: var(--grey-dark);
+    color: white;
+    border-color: var(--orange-light);
+}
+
+.btn-secondary {
+    background-color: var(--orange);
+    color: white;
+    border: none;
+}

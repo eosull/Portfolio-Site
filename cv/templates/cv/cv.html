@@ -3,12 +3,6 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row justify-content-center my-3">
-        <div class="col text-center">
-            <h2>CV</h2>
-        </div>
-    </div>
-
     <div class="row">
         <div class="col-sm-3 my-3">
             {% for person in personal %}
@@ -16,38 +10,64 @@
                 <p class="text-lvl-one my-0">{{ person.location }}</p>
             {% endfor %}
             <hr>
-            {% for link in links %}
-                <a href="{{ link.url }}" class="text-muted">{{ link.title }}</a>
-            {% endfor %}
+            <div class="nav d-flex align-items-center">
+                <li class="ms-3"><a class="text-muted display-6" target="_blank" href="https://github.com/eosull"><i class="bi bi-github icon"></i></a></li>
+                <li class="ms-3"><a class="text-muted display-6" target="_blank" href="https://www.linkedin.com/in/eoin-o-sullivan-ab262b180/"><i class="bi bi-linkedin icon"></i></a></li>
+            </div>
+            <ul class="list-group list-group-flush d-none d-sm-block">
+                <li class="list-group-item flex-fill">Python</li>
+                <li class="list-group-item flex-fill">JavaScript</li>
+                <li class="list-group-item flex-fill">HTML</li>
+                <li class="list-group-item flex-fill">CSS</li>
+                <li class="list-group-item flex-fill">Django</li>
+                <li class="list-group-item flex-fill">Agile</li>
+            </ul>
+            <div class="nav d-flex align-items-center">
+                <li class="ms-3 my-3"><a class="btn btn-secondary" href="{% url 'projects' %}">Portfolio</a></li>
+                <li class="ms-3 my-3"><a class="btn btn-secondary" href="{% url 'contact' %}">Contact</a></li>
+            </div>
         </div>
-        <div class="col-sm-9 justify-content-center my-3">
-            <h5 class="text-lvl-one small">Academic</h5>
-            <hr>
-            {% for exp in academic_exp %}
-            <div class="col-3">
-                <p class="text-muted">{{ exp.start_date|date:"M Y" }} - {{ exp.end_date|date:"M Y" }}</p>
-            </div>
-            <div class="col-9">
-            <p class="lead my-0">{{ exp.institution }}, {{ exp.location }}</p>
-            <p class="text-lvl-one my-0">{{ exp.field }}</p>
-            <p class="small my-0">{{ exp.description }}</p>
-            <p class="text-lvl-one mt-0">Key Skills: {{ exp.skills }}</p>
-            </div>
+        <div class="col-sm-9 justify-content-center align-items-center landing-section my-5">
+              <h4 class="text-lvl-one small">Academic Experience</h4>
+              {% for record in academic_exp %}
+              <br class="d-block d-sm-none">
+              <div class="row">
+                <div class="col-12 col-sm-3">
+                  <p class="text-muted">{{ record.start_date|date:"M Y" }} - {{ record.end_date|date:"M Y" }}</p>
+                </div>
+                <div class="col-12 col-sm-9">
+                  <ul class="m-1 m-sm-0">
+                    <li>
+                      <p class="lead my-0">{{ record.level }} {{ record.field }}</p>
+                    </li>
+                  </ul>
+                  <p class="text-lvl-one my-0 orange-highlight">{{ record.institution }}, {{ record.location }}</p>
+                  <p class="my-0">{{ record.description }}</p>
+                  <p class="text-lvl-one my-0">Key Skills: {{ record.skills }}</p>
+                </div>
+              </div>
               {% endfor %}
-    
-            <h5 class="text-lvl-one small">Professional</h5>
-            <hr>
-            {% for exp in professional_exp %}
-            <div class="col-3">
-                <p class="text-muted">{{ exp.start_date|date:"M Y" }} - {{ exp.end_date|date:"M Y" }}</p>
-            </div>
-            <div class="col-9">
-            <p class="lead my-0">{{ exp.company }}, {{ exp.location }}</p>
-            <p class="text-lvl-one my-0">{{ exp.title }}</p>
-            <p class="small my-0">{{ exp.description }}</p>
-            <p class="text-lvl-one mt-0">Key Skills: {{ exp.skills }}</p>
-            </div>
+              <hr class="w-50 my-4">
+              <h4 class="text-lvl-one small">Professional Experience</h4>
+              {% for record in professional_exp %}
+              <br class="d-block d-sm-none">
+              <div class="row">
+                <div class="col-12 col-sm-3">
+                  <p class="text-muted">{{ record.start_date|date:"M Y" }} - {{ record.end_date|date:"M Y" }}</p>
+                </div>
+                <div class="col-12 col-sm-9">
+                  <ul class="m-1">
+                    <li>
+                      <p class="lead my-0">{{ record.title }}</p>
+                    </li>
+                  </ul>
+                  <p class="text-lvl-one my-0  orange-highlight">{{ record.company }}, {{ record.location }}</p>
+                  <p class="my-0">{{ record.description }}</p>
+                  <p class="text-lvl-one my-0">Key Skills: {{ record.skills }}</p>
+                </div>
+              </div>
               {% endfor %}
+        </div>          
         </div>
     </div>
     
