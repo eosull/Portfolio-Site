@@ -32,8 +32,8 @@ ALLOWED_HOSTS = ['8000-eosull-portfoliosite-id5edz7n5bf.ws-eu107.gitpod.io',
                 ]
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-eosull-portfoliosite-j0wcrmb1kkz.ws-eu98.gitpod.io',
-                        'https://8000-eosull-portfoliosite-q9njhn9tr2o.ws-eu105.gitpod.io',
-                        'https://8000-eosull-portfoliosite-id5edz7n5bf.ws-eu107.gitpod.io',]
+                        'https://8000-eosull-portfoliosite-id5edz7n5bf.ws-eu108.gitpod.io',
+                        ]
 
 # Application definition
 
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'boto3',
     'home',
     'portfolio',
     'cv',
@@ -96,6 +97,7 @@ WSGI_APPLICATION = 'eosull_portfolio.wsgi.application'
 
 DATABASES = {
     'default':
+        # dj_database_url.parse(os.environ.get("DATABASE_URL"))
         dj_database_url.parse('postgres://oioizjre:R9w_cUTxN0F_T5wjEwSLll6urSEc9N9B@lucky.db.elephantsql.com/oioizjre')
 }
 
@@ -139,14 +141,28 @@ DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER', '')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+# AWS Configuration
+# AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+# AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_ACCESS_KEY_ID = "AKIA3MT65A44BTPKH5QQ"
+AWS_SECRET_ACCESS_KEY = "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"
+AWS_STORAGE_BUCKET_NAME = 'eosull-portfolio'
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+AWS_S3_SIGNATURE_NAME = 's3v4',
+AWS_S3_REGION_NAME = 'eu-north-1'
+
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_LOCATION = 'static'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+IMAGEFILES_LOCATION = 'images'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-MEDIA_URL = '/media/'
+IMAGE_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{IMAGEFILES_LOCATION}/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
