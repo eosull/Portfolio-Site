@@ -73,7 +73,7 @@
               </ul>
               <p class="text-lvl-one my-0 orange-highlight">{{ record.institution }}, {{ record.location }}</p>
               <p class="my-0">{{ record.description }}</p>
-              <p class="text-lvl-one my-0">Key Skills: {{ record.skills }}</p>
+              <p class="text-lvl-one skill-text my-0">Key Skills: {{ record.skills }}</p>
             </div>
           </div>
           {% endfor %}
@@ -95,7 +95,7 @@
               </ul>
               <p class="text-lvl-one my-0  orange-highlight">{{ record.company }}, {{ record.location }}</p>
               <p class="my-0">{{ record.description }}</p>
-              <p class="text-lvl-one my-0">Key Skills: {{ record.skills }}</p>
+              <p class="text-lvl-one skill-text my-0">Key Skills: {{ record.skills }}</p>
             </div>
           </div>
           {% endfor %}
@@ -106,7 +106,7 @@
           {% for project in projects %}
                 <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 p-0">
                   <div class="card bg-dark text-white">
-                    <img src="{{ project.image_main.url }}" alt="{{ project.title }}" class="card-img">
+                    <img src="{{ project.image_main.url }}" alt="{{ project.title }}" class="object-fit-none card-img">
                     <a href="{% url 'project_detail' project.id %}">
                       <div class="card-img-overlay hidden">
                           <p class="card-title">{{ project.title }}</p>

@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Manrope:wght@300&family=Outfit:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/648f3bcf1e.js" crossorigin="anonymous"></script>
     {% endblock %}
 
@@ -31,9 +31,10 @@
 </head>
 <body>
     <header class="container-fluid">
-      <ul class="list-inline list-unstyled my-0 float-end">
+      <ul class="list-inline list-unstyled my-0 float-sm-end">
         <li class="list-inline-item px-2 px-sm-3">
-          <a class="nav-link" href="{% url 'home' %}">Home</a>
+          <a class="d-none d-sm-block nav-link" href="{% url 'home' %}">Home</a>
+          <a class="d-block d-sm-none nav-link home-link" href="{% url 'home' %}"><i class="bi bi-house-fill"></i></a>
         </li>
         <li class="list-inline-item px-2 px-sm-3">
           <a class="nav-link" href="{% url 'projects' %}">Portfolio</a>
