@@ -1,1 +1,1 @@
-web: gunicorn eosull_portfolio_site.wsgi:application
+web: gunicorn eosull_portfolio.wsgi:application
