@@ -29,12 +29,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-eosull-portfoliosite-id5edz7n5bf.ws-eu107.gitpod.io',
                  '8000-eosull-portfoliosite-id5edz7n5bf.ws-eu108.gitpod.io',
-                 'https://eosull-2c8ceb94ba41.herokuapp.com/',
+                 'eosull-2c8ceb94ba41.herokuapp.com',
                 ]
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-eosull-portfoliosite-j0wcrmb1kkz.ws-eu98.gitpod.io',
                         'https://8000-eosull-portfoliosite-id5edz7n5bf.ws-eu108.gitpod.io',
-                        'https://eosull-2c8ceb94ba41.herokuapp.com/',
+                        'eosull-2c8ceb94ba41.herokuapp.com',
                         ]
 
 # Application definition
