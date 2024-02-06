@@ -29,12 +29,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-eosull-portfoliosite-id5edz7n5bf.ws-eu107.gitpod.io',
                  '8000-eosull-portfoliosite-id5edz7n5bf.ws-eu108.gitpod.io',
-                #  'eosull-2c8ceb94ba41.herokuapp.com',
+                 'eosull-2c8ceb94ba41.herokuapp.com',
                 ]
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-eosull-portfoliosite-j0wcrmb1kkz.ws-eu98.gitpod.io',
                         'https://8000-eosull-portfoliosite-id5edz7n5bf.ws-eu108.gitpod.io',
-                        # 'eosull-2c8ceb94ba41.herokuapp.com',
+                        'eosull-2c8ceb94ba41.herokuapp.com',
                         ]
 
 # Application definition
@@ -99,8 +99,8 @@ WSGI_APPLICATION = 'eosull_portfolio.wsgi.application'
 
 DATABASES = {
     'default':
-        # dj_database_url.parse(os.environ.get("DATABASE_URL"))
-        dj_database_url.parse('postgres://oioizjre:R9w_cUTxN0F_T5wjEwSLll6urSEc9N9B@lucky.db.elephantsql.com/oioizjre')
+        dj_database_url.parse(os.environ.get("DATABASE_URL"))
+        # dj_database_url.parse('postgres://oioizjre:R9w_cUTxN0F_T5wjEwSLll6urSEc9N9B@lucky.db.elephantsql.com/oioizjre')
 }
 
 
