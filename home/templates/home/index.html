@@ -21,10 +21,7 @@
       </div>
       <div class="row justify-content-center align-items-center landing-section my-5">
         <div class="col-10">
-          <h4>About Me</h4>
-          <div>
-
-          </div>
+          <h4 class="heading-bar-1">About</h4>
           <p>
             I've got experience with core full stack technologies including HTML, CSS, JavaScript and Python. Alongside this
             I've worked with SQL, Django, Bootstrap and AWS hosting. So far my work has included artist portfolios,
@@ -57,7 +54,7 @@
       </div>
       <div class="row justify-content-center align-items-center landing-section my-5">
         <div class="col-10">
-          <a href="{% url 'cv' %}"><h4>Experience</h4></a>
+          <a href="{% url 'cv' %}"><h4 class="heading-bar-1">Experience</h4></a>
           <h5 class="text-lvl-one small">Academic</h4>
           {% for record in acad_exp %}
           <br class="d-block d-sm-none">
@@ -102,7 +99,7 @@
         </div>
       </div>
       <div class="row landing-section my-5">
-          <h4 class="text-center mb-4">Projects</h4>
+          <h4 class="text-center mb-4 heading-bar-2">Projects</h4>
           {% for project in projects %}
                 <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 p-0">
                   <div class="card bg-dark text-white">

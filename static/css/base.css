@@ -85,6 +85,16 @@ ul {
 }
 
 /* Landing Styling */
+.heading-bar-1 {
+    background: rgb(247,119,49);
+    background: linear-gradient(30deg, rgba(247,119,49,1) 5%, rgba(0,0,0,1) 45%);
+}
+
+.heading-bar-2 {
+    background: rgb(247,119,49);
+    background: radial-gradient(circle, rgba(247,119,49,1) 2%, rgba(0,0,0,1) 39%);
+}
+
 .landing-section {
     min-height: 70vh;
 }
