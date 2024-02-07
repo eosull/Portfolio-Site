@@ -70,6 +70,10 @@ ul {
     color: var(--orange);
 }
 
+.white-text {
+    color: white;
+}
+
 .card img {
     height: 100%;
     overflow: hidden;
@@ -79,7 +83,7 @@ ul {
     height: 100%;
 }
 
-.home-link:hover {
+.nav-bar-link:hover {
     transition: 0.3s;
     color: var(--orange-light);
 }
@@ -101,6 +105,12 @@ ul {
 
 .heading-orange {
     color: var(--orange);
+}
+
+.heading,
+.heading-bar-2,
+.heading-bar-1 {
+    letter-spacing: 3px;
 }
 
 .hero-image-container {
@@ -157,10 +167,6 @@ ul {
     height: auto;
 }
 
-/* .project-details img {
-    max-height: 400px;
-} */
-
 /* CV Page Styling */
 .list-group-item {
     background-color: var(--grey-dark);
@@ -170,6 +176,7 @@ ul {
 
 .btn-secondary {
     background-color: var(--orange);
+    transition: 0.3s;
     color: white;
     border: none;
 }
