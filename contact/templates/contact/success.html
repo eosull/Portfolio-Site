@@ -6,6 +6,23 @@
     <div class="row justify-content-center my-3">
         <div class="col text-center">
             <h2>Form Submitted successfully</h2>
+            <p class="orange-highlight">Thanks! I'll try and get back to you as soon as possible.</p>
+            <hr>
+            <ul class="list-inline list-unstyled my-0">
+                <li class="list-inline-item px-2 px-sm-3">
+                  <a class="d-none d-sm-block nav-link nav-bar-link" href="{% url 'home' %}">Home</a>
+                  <a class="d-block d-sm-none nav-link nav-bar-link" href="{% url 'home' %}"><i class="bi bi-house-fill"></i></a>
+                </li>
+                <li class="list-inline-item px-2 px-sm-3">
+                  <a class="nav-link nav-bar-link" href="{% url 'projects' %}">Portfolio</a>
+                </li>
+                <li class="list-inline-item px-2 px-sm-3">
+                  <a class="nav-link nav-bar-link" href="{% url 'cv' %}">CV</a>
+                </li>
+                <li class="list-inline-item px-2 px-sm-3">
+                  <a class="nav-link nav-bar-link" href="{% url 'contact' %}">Contact</a>
+                </li>
+              </ul>
         </div>
     </div>
 </div>
