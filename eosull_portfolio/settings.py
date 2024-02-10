@@ -30,11 +30,13 @@ DEBUG = True
 ALLOWED_HOSTS = ['8000-eosull-portfoliosite-id5edz7n5bf.ws-eu107.gitpod.io',
                  '8000-eosull-portfoliosite-id5edz7n5bf.ws-eu108.gitpod.io',
                  'eosull-2c8ceb94ba41.herokuapp.com',
+                 'www.eosull.xyz'
                 ]
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-eosull-portfoliosite-j0wcrmb1kkz.ws-eu98.gitpod.io',
                         'https://8000-eosull-portfoliosite-id5edz7n5bf.ws-eu108.gitpod.io',
                         'eosull-2c8ceb94ba41.herokuapp.com',
+                        'www.eosull.xyz'
                         ]
 
 # Application definition
@@ -100,6 +102,7 @@ WSGI_APPLICATION = 'eosull_portfolio.wsgi.application'
 DATABASES = {
     'default':
         dj_database_url.parse(os.environ.get("DATABASE_URL"))
+        # dj_database_url.parse('postgres://oioizjre:R9w_cUTxN0F_T5wjEwSLll6urSEc9N9B@lucky.db.elephantsql.com/oioizjre')
 }
 
 
@@ -143,10 +146,11 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 # For local CSS work
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # AWS Configuration
+
 AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = 'eosull-portfolio'

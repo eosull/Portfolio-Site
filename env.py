@@ -4,3 +4,5 @@ os.environ["DATABASE_URL"] = 'postgres://oioizjre:R9w_cUTxN0F_T5wjEwSLll6urSEc9N
 os.environ["SECRET_KEY"] = 'django-insecure-wix1g88kr1ynf@6ybk-q0y9(ost4ifr2##32w0^^72!xx9)hwp'
 os.environ["EMAIL_HOST_USER"] = 'eosulldev@gmail.com'
 os.environ["EMAIL_HOST_PASSWORD"] = 'hubm gtkj gdch xdit'
+os.environ["AWS_ACCESS_KEY_ID"] = 'AKIA3MT65A44BTPKH5QQ'
+os.environ["AWS_SECRET_ACCESS_KEY"] = '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'
