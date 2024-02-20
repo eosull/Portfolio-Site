@@ -102,7 +102,6 @@ WSGI_APPLICATION = 'eosull_portfolio.wsgi.application'
 DATABASES = {
     'default':
         dj_database_url.parse(os.environ.get("DATABASE_URL"))
-        # dj_database_url.parse('postgres://oioizjre:R9w_cUTxN0F_T5wjEwSLll6urSEc9N9B@lucky.db.elephantsql.com/oioizjre')
 }
 
 
@@ -151,7 +150,7 @@ EMAIL_USE_TLS = True
 
 # AWS Configuration
 
-AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+AWS_ACCESS_KEY_ID = 'AKIA3MT65A44BTPKH5QQ'
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = 'eosull-portfolio'
 AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'

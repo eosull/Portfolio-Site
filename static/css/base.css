@@ -3,7 +3,7 @@
 :root {
     --orange: #f77731;
     --orange-light: #f7763195;
-    --grey: rgb(132, 132, 132);
+    --grey: rgb(103, 103, 103);
     --grey-light: rgba(0, 0, 0, 0.549);
     --grey-dark: rgba(0, 0, 0, 0.828);
 }
@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: rgb(0,0,0);
+    background: rgb(0, 0, 0);
     color: white;
     font-family: 'Source Sans 3', sans-serif;
 }
@@ -110,7 +110,7 @@ ul {
 .heading,
 .heading-bar-2,
 .heading-bar-1 {
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .hero-image-container {
